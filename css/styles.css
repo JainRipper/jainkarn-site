@@ -528,6 +528,10 @@ ul.no-bullets {
   display: inline-block;
 }
 
+.work-desc i.fa {
+  font-size: 1.75rem;
+}
+
 .work-date {
   margin-top: -10px;
   top: 50%;
