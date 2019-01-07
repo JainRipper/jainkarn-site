@@ -649,6 +649,10 @@ ul.no-bullets {
   padding-left: 2em;
 }
 
+.work-radio:checked ~ .work-desc ol ul {
+  list-style-type: none;
+}
+
 .work-radio:checked ~ .work-desc .experience-details {
   display: inline-block;
   margin-bottom: 0.5em !important;
@@ -1239,6 +1243,9 @@ and (max-width: 480px) {
   .work-radio:checked ~ .work-desc ul {
     font-size: 0.9em;
     font-weight: 100;
+  }
+  .work-radio:checked ~ .work-desc ol ul li {
+    display: none;
   }
 }
 
