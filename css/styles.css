@@ -711,6 +711,7 @@ ul.no-bullets {
   flex-direction: column;
   max-width: 700px;
   position: relative;
+  padding-bottom: 10vh;
 }
 
 .timeline__content-title {
