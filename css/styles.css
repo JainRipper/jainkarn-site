@@ -400,7 +400,7 @@ ul.no-bullets {
 
 /* Page - Certifications  */
 #certifications .container {
-  width: 75%;
+  width: 85%;
 }
 
 #certifications.page {
@@ -412,14 +412,14 @@ ul.no-bullets {
   /* opacity: 1; */
 }
 
-.certs {
+.ports {
   width: 100%;
   display: block;
   float: left;
   padding-bottom: 20px;
 }
 
-.certs h3 {
+.ports h3 {
   margin: 20px 20px 10px 20px;
   position: relative;
   color: #39a074;
@@ -427,7 +427,7 @@ ul.no-bullets {
   text-transform: uppercase;
 }
 
-.certs h3 .fa {
+.ports h3 .fa {
   position: absolute;
   top: -4px;
   right: 0;
@@ -437,55 +437,68 @@ ul.no-bullets {
   border-radius: 3px;
 }
 
-.certs ul {
-  font-size: 0.9em;
+.ports ul {
+  font-size: 1em;
   font-weight: 300;
   list-style: none;
   margin: 0;
   padding: 0 20px;
 }
 
-.certs ul li {
+.ports .prim {
+  /* font-size: 1.15em; */
+}
+
+.code i {
+  font-size: 1.25em;
+}
+
+.ports ul li {
   float: left;
   padding: 4px 6px;
   margin: 0 4px 4px 0;
 }
 
-.certs ul li.light {
-  opacity: 0.6;
+.ports ul li.code {
+  /* opacity: 0.6; */
+  background: #fbfbfb;
 }
 
-.certs.online {
+.ports.online {
   border: 1px dashed #233550;
   box-shadow: 0 0 0 3px #fff, 0 0 0 5px #39a074, 0 0 0 10px #fff, 0 0 2px 12px #eee;
   /* background: #75cc6c; */
 }
 
-.certs.online li{
+.ports.online li{
   background: #39a074;
   color: #233550;
   text-shadow: 0 1px 1px #6e7e93;
 }
 
-.certs.online li:hover {
+.ports.online li:hover {
   background: #fbfbfb;
 }
 
-.certs.online li.prim {
+.ports.online li.prim {
   text-shadow: none;
   background: #233550;
-  color: #fbfbfb;
   clear: left;
+  /* padding: 2px; */
 }
 
-.certs.online li a {
+.ports.online li a {
   font-size: unset;
   font-weight: 300;
   color: #233550;
   text-shadow: 0 1px 1px #6e7e93;
 }
 
-.certs.online li a:focus {
+.ports.online li.prim a {
+  color: #fbfbfb;
+}
+
+.ports.online li a:focus {
   text-decoration: none;
 }
 
@@ -1107,11 +1120,11 @@ and (max-width: 480px) {
 
 /* Page - Certifications */
 @media (max-width: 1010px) {
- .certs.code,
- .certs.software {
+ .ports.code,
+ .ports.software {
    width: 100%;
  }
- .certs.code {
+ .ports.code {
    margin-bottom: 10px;
  }
 }
@@ -1123,7 +1136,7 @@ and (max-width: 480px) {
 }
 
 @media (max-width: 480px) {
- .certs ul li {
+ .ports ul li {
    float: none;
  }
  #certifications .container {
