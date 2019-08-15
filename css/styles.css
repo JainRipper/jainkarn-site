@@ -464,13 +464,14 @@ ul.no-bullets {
 
 .ports ul li {
   float: left;
-  padding: 4px 6px;
+  /* padding: 4px 6px; */
   margin: 0 4px 4px 0;
 }
 
 .ports ul li.code {
   /* opacity: 0.6; */
   background: #fbfbfb;
+  padding: 4px 6px;
 }
 
 .ports.online {
@@ -479,10 +480,24 @@ ul.no-bullets {
   /* background: #75cc6c; */
 }
 
+.ports.online:after {
+  content: '\002702';
+  display: inline-block; 
+  position: relative; 
+  top: 25.95em; 
+  left: -1em; 
+  color: #8c8b8b; 
+  font-size: 18px; 
+}
+.ports.online:active:after {
+  color: red; 
+}
+
 .ports.online li{
   background: #39a074;
   color: #233550;
   text-shadow: 0 1px 1px #6e7e93;
+  /* transition: 1s; */
 }
 
 .ports.online li:hover {
@@ -494,7 +509,7 @@ ul.no-bullets {
   background: #233550;
   clear: left;
   width: 16em;
-  /* padding: 2px; */
+  padding: 4px 6px;
 }
 
 .ports.online li a {
@@ -511,7 +526,134 @@ ul.no-bullets {
 .ports.online li a:focus {
   text-decoration: none;
 }
+/* skills hover */
+.button-container-1 {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6vh;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+.button-container-1 button {
+  padding: 4px 6px;
+  letter-spacing: 1px;
+  background: #39a074;
+  -webkit-mask: url(../images/mask/nature-sprite.png);
+  mask: url(../images/mask/nature-sprite.png);
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  border: none;
+  color: #233550;
+  text-shadow: 0 1px 1px #6e7e93;
+  cursor: text;
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+}
+.button-container-1 button:hover {
+  -webkit-animation: ani 0.7s steps(22) forwards;
+  animation: ani 0.7s steps(22) forwards;
+}
 
+.button-container-2 {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7vh;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+.button-container-2 button {
+  padding: 4px 6px;
+  letter-spacing: 1px;
+  background: #39a074;
+  -webkit-mask: url(../images/mask/urban-sprite.png);
+  mask: url(../images/mask/urban-sprite.png);
+  -webkit-mask-size: 3000% 100%;
+  mask-size: 3000% 100%;
+  border: none;
+  color: #233550;
+  text-shadow: 0 1px 1px #6e7e93;
+  cursor: text;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
+}
+.button-container-2 button:hover {
+  -webkit-animation: ani 0.7s steps(29) forwards;
+  animation: ani 0.7s steps(29) forwards;
+}
+
+.button-container-3 {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8vh;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+.button-container-3 button {
+  padding: 4px 6px;
+  letter-spacing: 1px;
+  background: #39a074;
+  -webkit-mask: url(../images/mask/nature-sprite-2.png);
+  mask: url(../images/mask/nature-sprite-2.png);
+  -webkit-mask-size: 7100% 100%;
+  mask-size: 7100% 100%;
+  border: none;
+  color: #233550;
+  text-shadow: 0 1px 1px #6e7e93;
+  cursor: text;
+  -webkit-animation: ani2 0.7s steps(70) forwards;
+  animation: ani2 0.7s steps(70) forwards;
+}
+.button-container-3 button:hover {
+  -webkit-animation: ani 0.7s steps(70) forwards;
+  animation: ani 0.7s steps(70) forwards;
+}
+.mas {
+  position: absolute;
+  padding: 4px 6px;
+}
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
 /*--------------- Page - Gallery 
 .gallery-container {
 	margin: 0 auto;
@@ -1084,7 +1226,7 @@ footer .icons a:hover img {
     right: 42%;
   }
   #profile p {
-    margin-left: 0;
+    margin-left: 3.2em;
   }
   #profile a:hover.btn {
     right: 42%;
@@ -1208,6 +1350,9 @@ and (max-width: 480px) {
   #certifications .container {
     width: 96%;
   }
+  .ports.online:after {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1221,6 +1366,20 @@ and (max-width: 480px) {
   .ports.online li.prim {
     width: 100%;
   }
+  .ports ul li.code {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .mas {
+    width: 100%;
+    text-align: center;
+  }
+  .button-container-1 button,
+  .button-container-2 button,
+  .button-container-3 button {
+    width: 100%;
+  }
+
 }
 
  /* Page - Experience */
@@ -1403,7 +1562,7 @@ and (max-width: 480px) {
 
 @media (max-width: 768px) {
   .footer_content .contact-info {
-    left: -1.5em;
+    left: 0.5em;
   }
   .footer_content p {
     right: 1em;
