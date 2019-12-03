@@ -1,8 +1,6 @@
 
 (function() {
-
   "use strict";
-
   var topoffset = 50; //variable for menu height
 
   //----- Scrollspy Usage -----//
@@ -11,17 +9,15 @@
     offset: topoffset
   });
 
-  //Add 'inbody' when go to other sections except 'profile'
-  // var hash = $(this).find('li.active a').attr('href');  //get href ID
-  var hash = document.querySelector("li.active a").getAttribute("href");
-  // add Class 'inbody' to nav except 'profile' section
+  // Add 'inbody' when go to other sections except 'profile'
+  var hash = document.querySelector("li.active a").getAttribute("href"); //get href ID
   if(hash !== '#profile') {
     $('header nav').addClass('inbody');
   } else {
     $('header nav').removeClass('inbody');
   }
 
-  //Add 'inbody' class to nav when Scrollspy event activates
+  // Add 'inbody' class to nav when Scrollspy event activates
   $('.navbar-fixed-top').on('activate.bs.scrollspy', function () {
     var hash = $(this).find('li.active a').attr('href');
     if(hash !== '#profile') {
@@ -30,25 +26,24 @@
       $('header nav').removeClass('inbody');
     }
   })
-  //// Scrollspy Usage ////
 
-  //Use smooth scrolling when clicking on navigation
-    $('.navbar a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') ===
-        this.pathname.replace(/^\//,'') &&
-        location.hostname === this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top-topoffset+2
-          }, 500);
-          return false;
-        } //target.length
-      } //click function
-    }); //smooth scrolling
+  // Use smooth scrolling when clicking on navigation
+  $('.navbar a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') ===
+      this.pathname.replace(/^\//,'') &&
+      location.hostname === this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top-topoffset+2
+        }, 500);
+        return false;
+      } //target.length
+    } //click function
+  }); //smooth scrolling
 
-//======================================================
+  //----- Education Section -----//
   $.fn.timeline = function() {
     var selectors = {
       id: $(this),
@@ -76,7 +71,6 @@
             selectors.item.removeClass(selectors.activeClass);
             $(this).addClass(selectors.activeClass);
           }
-
       });
     });
   }
@@ -203,9 +197,9 @@
 
 })(jQuery);
 $("#timeline-1").timeline();
-$(window).load(function(){
+$(window).load(function(){  // Use slow loading instead !
   // Page Load Animate
   $('.contOut').animate({
     'opacity':'1'
-  },500);
+  },50);
 });
