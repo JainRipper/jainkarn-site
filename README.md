@@ -1,3 +1,8 @@
-# 1. How to run LESS
-- cd css
-- lessc master.less master.css
+# Jainkarn's personal CV & Portfolio (BootStrap & JS)
+
+[Link](https://www.jainkarn.site/)
+
+## Features
+- Download CV
+- Fully responsive with Desktop, Tablet and Mobile 
+- Smooth scrolling
